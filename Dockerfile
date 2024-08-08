@@ -20,4 +20,5 @@ COPY --from=builder /app/openserp /usr/local/bin/openserp
 ADD config.yaml /usr/src/app
 
 # Start the server automatically when the container starts
+EXPOSE 7000
 CMD ["openserp", "serve", "-a", "0.0.0.0", "-p", "7000"]
